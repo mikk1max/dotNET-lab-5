@@ -1,0 +1,16 @@
+@model int
+
+<div title="@Model">
+@for (int i = 0; i < Model; i++)
+{
+    @Html.Raw("&#x2605;")
+
+    if (i == Model - 1 && Model < 5)
+    {
+        for (int j = 0; j < 5 - Model; j++)
+        {
+            @Html.Raw("&#x2606;")
+        }
+    }
+}
+</div>
